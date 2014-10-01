@@ -53,8 +53,9 @@ public class DateActivity extends Activity {
         // then you should input index.
         // ex) 0, 1, 2 ...
         // so i will cahnge this code 
-        // -> year.setCurrentItem(0);
-        year.setCurrentItem(curYear);   // wrong !
+        //year.setCurrentItem(curYear);   // wrong !
+        // -> 
+        year.setCurrentItem(0);
         
         year.addChangingListener(listener);
         
