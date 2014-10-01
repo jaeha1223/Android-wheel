@@ -45,7 +45,17 @@ public class DateActivity extends Activity {
         // year
         int curYear = calendar.get(Calendar.YEAR);
         year.setViewAdapter(new DateNumericAdapter(this, curYear, curYear + 10, 0));
-        year.setCurrentItem(curYear);
+        
+        // It's wrong.
+        // ex) curYear is 2014.
+        // but it's not index.
+        // if you want to work correct
+        // then you should input index.
+        // ex) 0, 1, 2 ...
+        // so i will cahnge this code 
+        // -> year.setCurrentItem(0);
+        year.setCurrentItem(curYear);   // wrong !
+        
         year.addChangingListener(listener);
         
         //day
